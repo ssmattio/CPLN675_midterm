@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <!-- CSS Imports -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/leaflet.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div id="intro">
+        <h1>Covid-19: Cases and Deaths through Time</h1>
+        <p class="main">In January 2020, the first confirmed case of Coronavirus,
+        or Covid-19, was confirmed in the United States. Two months later, the
+      number of cases began to increase rapidly, causing most states to declare
+    Shelter-in-Place policies and shut down non-essential businesses.</p>
+        <p>This application shows the number of cases by county. Click <b>Next</b>
+        to see how the number of cases changes as time goes on.</p>
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <button>Next</button>
+    </div>
+    <!-- Map -->
+    <div id="map" class="map"></div>
+    <!-- Legend -->
+    <div class='legend'>
+    <div class='legend-title'>Number of Cases</div>
+    <div class='legend-scale'>
+      <ul class='legend-labels'>
+        <li><span style='background:#fce186;'></span>0-100</li>
+        <li><span style='background:#fccb4f;'></span>101-1,000</li>
+        <li><span style='background:#feb919;'></span>1,001-5,000</li>
+        <li><span style='background:#fc7002;'></span>5,001-9,000</li>
+        <li><span style='background:#d1341e;'></span>Greater than 9,000</li>
+      </ul>
+    </div>
+    <!-- Javascript Imports -->
+    <script src="js/jquery-2.2.0.js"></script>
+    <script src="js/underscore.js"></script>
+    <script src="js/leaflet.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
