@@ -21,6 +21,7 @@ availableDates.forEach((ad, index) => {
   $dateList.append("<li><a href=\"#\" data-date="+ ad +" data-index="+ index+">" + ad + "</a></li>");
 });
 
+//symbolize markers by number of cases
 function getPointsForDate(date) {
   const countries = covidCases;
   countries.forEach(function(country) {
@@ -29,17 +30,17 @@ function getPointsForDate(date) {
       var imageUrl = "";
 
       if (casesOnDate === 0) {
-        imageUrl = "js/images/marker-icon.png"; 
+        imageUrl = "js/images/marker-icon.png";
       } else if (casesOnDate > 0 && casesOnDate < 100) {
-        imageUrl = "js/images/marker_5000.png"; 
-      } else if (casesOnDate > 100 && casesOnDate < 1000) { 
-        imageUrl = "js/images/marker_100.png"; 
-      } else if (casesOnDate > 1000 && casesOnDate < 5000) { 
-        imageUrl = "js/images/marker_9000.png"; 
-      } else if (casesOnDate > 5000 && casesOnDate < 9000) { 
-        imageUrl = "js/images/marker_1000.png"; 
+        imageUrl = "js/images/marker_5000.png";
+      } else if (casesOnDate > 100 && casesOnDate < 1000) {
+        imageUrl = "js/images/marker_100.png";
+      } else if (casesOnDate > 1000 && casesOnDate < 5000) {
+        imageUrl = "js/images/marker_9000.png";
+      } else if (casesOnDate > 5000 && casesOnDate < 9000) {
+        imageUrl = "js/images/marker_1000.png";
       } else {
-        imageUrl = "js/images/marker_0000.png"; 
+        imageUrl = "js/images/marker_0000.png";
       }
 
       var pointIcon = new L.Icon({
@@ -58,7 +59,7 @@ function getPointsForDate(date) {
       allMarkers.push(mrkr);
     });
   });
- 
+
 }
 
 function getDateFromIndex(index) {
@@ -111,7 +112,7 @@ $("[data-prev]").on("click", function(event) {
   }
 
   var selectedDate = getDateFromIndex(currentDateIndex);
-  
+
   setDateDisplay(selectedDate);
   getPointsForDate(selectedDate);
 });
